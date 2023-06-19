@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  @font-face {
+    font-family: 'varela';
+    src: url('../Varela_Round/VarelaRound-Regular.ttf');
+  }
+  body {
+    font-family: 'varela';
+    font-weight: 500;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+  }
+}
+@layer components {
+  .container {
+    @apply
+    px-8 sm:px-12 md:px-16 lg:px-20 xl:px-24 2xl:px-28
+  }
+
+  .special {
+    font-size: 60px;
+    text-align: center;
+    color: #797979;
+    text-transform: capitalize;
+  }
+
+  .special + p {
+    margin-top: -15px;
+    text-align: center;
+    color: #797979;
+  }
+
+  @media (min-width:768px) {
+    .special {
+      font-size: 100px;
+      font-weight: 800;
+      letter-spacing: -3px;
+      margin: 0;
+    }
+
+    .special + p {
+      margin: -30px 0 0;
+      font-size: 20px;
+    }
+  }
+
+  
+}
